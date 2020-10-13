@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Button size="small" @click="handelClick">按钮</Button>
+    <Button size="small" @click="handelClick">接口测试</Button>
     <router-link to="/about">About</router-link>
   </div>
 </template>

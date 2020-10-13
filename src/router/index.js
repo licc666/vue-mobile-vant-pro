@@ -6,18 +6,25 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '*',
+    name: '404',
+    component: () => import('@/pages/exception/404')
+  },
+  {
     path: '/',
     redirect: '/home',
-    component: layout.Blank,
+    component: layout.FooterBar,
     children: [
       {
         path: '/home',
-        name: '首页',
+        title: '首页',
+        name: 'home',
         component: () => import('@/pages/home')
       },
       {
         path: '/about',
-        name: '关于',
+        title: '关于',
+        name: 'about',
         component: () => import('@/pages/about')
       }
     ]
